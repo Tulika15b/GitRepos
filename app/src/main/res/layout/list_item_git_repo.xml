@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:src="@drawable/ic_baseline_assignment_ind_24"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/gitRepo_icon"
+        android:scaleType="centerCrop"/>
+    
+    <TextView
+        android:text="Repo Name"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/gitRepo_name"
+        android:textColor="#52575C"
+        android:textSize="12dp"
+        android:layout_toEndOf="@id/gitRepo_icon"/>
+
+    <TextView
+        android:id="@+id/gitRepo_descr"
+        android:layout_marginLeft="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repo Descr"
+        android:textColor="#52575C"
+        android:textSize="15dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@id/gitRepo_icon"
+        android:layout_below="@id/gitRepo_name"
+        />
+
+    <TextView
+        android:id="@+id/gitRepo_url"
+        android:layout_marginLeft="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repo Url"
+        android:textColor="#52575C"
+        android:textSize="15dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@id/gitRepo_icon"
+        android:layout_below="@id/gitRepo_descr"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:id="@+id/expandable_repo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/gitRepo_url"
+        android:layout_toEndOf="@id/gitRepo_icon"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ic_lang"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_language"/>
+
+        <TextView
+            android:id="@+id/gitRepo_lang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:textSize="12dp"
+            android:text="Java"/>
+
+        <ImageView
+            android:id="@+id/ic_star"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/star"/>
+
+        <TextView
+            android:id="@+id/gitRepo_stars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:textSize="12dp"
+            android:text="1234"/>
+
+        <ImageView
+            android:id="@+id/ic_fork"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/fork"/>
+
+        <TextView
+            android:id="@+id/gitRepo_forks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:textSize="12dp"
+            android:text="1234"/>
+
+    </LinearLayout>
+</RelativeLayout>
