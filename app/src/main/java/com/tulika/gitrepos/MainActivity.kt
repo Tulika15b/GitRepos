@@ -22,18 +22,22 @@ class MainActivity : AppCompatActivity() {
 
     private val repoListAdapter = GitRepoListAdapter()
     lateinit var binding : ActivityMainBinding
+    lateinit var loadingBinding : LayoutShimmerLoadingBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
 
-        val loadingBinding = LayoutShimmerLoadingBinding.inflate(layoutInflater)
+        loadingBinding = LayoutShimmerLoadingBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
+        setupUI()
+        setupFetchObservers()
 
+    }
+
+    fun setupUI(){
         shimmerLayout = loadingBinding.shimmerFrameLayout
-
-
 
         binding.apply {
 
@@ -56,12 +60,7 @@ class MainActivity : AppCompatActivity() {
                     (gitRepoRecyclerView.layoutManager as LinearLayoutManager).orientation
                 )
             )
-
-            setupFetchObservers()
-
         }
-
-
     }
 
     fun setupFetchObservers(){

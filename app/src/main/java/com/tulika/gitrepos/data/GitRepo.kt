@@ -4,6 +4,7 @@ import androidx.annotation.Nullable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import java.util.*
 
 @Entity(tableName = "gitRepo")
 data class GitRepo(
@@ -34,12 +35,5 @@ data class GitRepo(
 
     var isExpanded: Boolean = false,
 
-   /* @SerializedName("owner")
-    var owner : Owner*/
-){
-
-}
-
-data class Owner(
-    @SerializedName("avatar_url")
-    val repoIconUrl : String)
+    //var installedAt : Date
+)

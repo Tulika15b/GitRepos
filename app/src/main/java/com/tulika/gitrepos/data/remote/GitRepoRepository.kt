@@ -33,8 +33,8 @@ class GitRepoRepository @Inject constructor(
         )
     }
 
-    fun isDataStale(){
-
+    suspend fun deleteStaleData() : Unit{
+        gitRepoDao.deleteAll()
     }
 
 

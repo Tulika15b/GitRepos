@@ -92,4 +92,7 @@ dependencies {
     kapt "com.google.dagger:hilt-android-compiler:2.37"
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+    // WorkManager dependency
+    implementation "androidx.work:work-runtime-ktx:2.5.0"
 }
